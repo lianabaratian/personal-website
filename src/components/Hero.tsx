@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a0000] via-[#2d0a0a] to-[#1a0000]">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #f472b6 0%, #9ca3af 45%, #000000 100%)' }}>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
@@ -23,17 +23,18 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-primary mb-4"
+            className="text-lg md:text-xl text-pink-700 mb-4" style={{ fontFamily: "'Pacifico', cursive" }}
           >
-            Hello, I'm
+            Welcome to my world, make yourself at home :&gt;
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl lg:text-8xl mb-6 text-black" style={{ fontFamily: "'Pacifico', cursive" }}
           >
+            <span className="block text-base md:text-lg font-light mb-1">I'm</span>
             Liana Baratian
           </motion.h1>
 
@@ -43,14 +44,14 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="mb-8"
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4">
+            <h2 className="text-xl md:text-2xl lg:text-3xl text-black mb-4">
               Computer Engineering Student &
             </h2>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-lg md:text-xl text-primary"
+              className="text-lg md:text-xl text-black"
             >
               Software Developer & UI/UX Designer
             </motion.p>
@@ -60,11 +61,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-black mb-8 max-w-2xl mx-auto leading-relaxed space-y-1"
           >
-            Passionate about AI, computer vision, and building intuitive digital experiences.
-            Graduating in July 2026 from Bahcesehir University, with hands-on projects spanning
-            deep learning, full-stack development, and UI/UX design.
+            I'm that person who opens the laptop "just to check one thing" and is still going three hours later!<br />
+            Frontend development is my craft, UI/UX is how I think, and AI is the rabbit hole I fell into and never want to climb out of!<br />
+            There's something about building interfaces that can actually see, predict, and learn that makes every project feel like it could be something special. Final year at Bahcesehir University, currently interning at NetworkX.ai and just getting started...
           </motion.p>
           
           <motion.div
@@ -119,9 +120,9 @@ const Hero = () => {
           variant="ghost"
           size="sm"
           onClick={scrollToAbout}
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground"
+          className="flex flex-col items-center gap-2 text-black hover:text-black/70"
         >
-          <span className="text-sm">Scroll Down</span>
+          <span className="text-sm text-pink-700" style={{ fontFamily: "'Pacifico', cursive" }}>Scroll Down</span>
           <ChevronDown size={20} />
         </Button>
       </motion.div>

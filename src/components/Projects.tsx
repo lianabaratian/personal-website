@@ -9,11 +9,11 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "VisionUX AI",
-      description: "An AI-driven UX auditor that predicts human visual attention on interfaces via Computer Vision and Saliency Mapping. Built a FastAPI + PyTorch backend for high-speed model inference (under 2s), used OpenCV to generate heatmaps and quantitative Attention Scores, and implemented a React.js interface with a Figma dashboard for real-time AI feedback.",
-      image: "https://images.unsplash.com/photo-1637904743105-3118bbe3ed8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBsYXB0b3AlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzU3NDgwNTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Python", "FastAPI", "PyTorch", "OpenCV", "React.js", "Figma"],
-      type: "AI Web Application",
+      title: "Webinar Landing Page",
+      description: "Built a fully responsive multi-page landing site for a client at NetworkX.ai, translating Figma designs into production-ready code. Implemented reusable React components with Next.js routing and Tailwind CSS, ensuring consistent UI across all breakpoints.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+      technologies: ["React.js", "Next.js", "Tailwind CSS", "Figma"],
+      type: "Frontend / UI",
       icon: Globe,
       liveUrl: "#",
       githubUrl: "#",
@@ -22,27 +22,28 @@ const Projects = () => {
     {
       id: 2,
       title: "Highway Reinforcement Learning Agent",
+
       description: "An autonomous driving agent trained with Deep Reinforcement Learning to safely navigate complex multi-lane highway scenarios. Optimized decision-making via reward shaping to improve collision avoidance and speed regulation, with iterative architecture analysis for smoother lane-changing behavior.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1NzQzOTQ3NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       technologies: ["Python", "Stable Baselines3", "OpenAI Gym", "highway-env"],
       type: "AI / Simulation",
       icon: Code,
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/lianabaratian/highway-rl",
       featured: true
     },
     {
-      id: 3,
-      title: "Movie Rating Prediction System",
-      description: "A collaborative filtering system that predicts user movie ratings with high accuracy. Implemented Cosine Similarity and optimized data structures to process large-scale datasets efficiently. Evaluated prediction reliability using RMSE metrics.",
-      image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzU3NDUxNjY2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["C++", "Data Structures", "Algorithms", "RMSE", "Cosine Similarity"],
-      type: "Data / Algorithms",
-      icon: BarChart3,
+      id: 4,
+      title: "Movie Recommendation System",
+      description: "A full-stack movie recommendation web app with user authentication, movie browsing, search, personalized recommendations, and a review system. Built with React and Tailwind CSS on the frontend, connected to a REST API with JWT-based auth and Axios interceptors.",
+      image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "Vite", "Axios", "JWT", "REST API"],
+      type: "Full-Stack Web App",
+      icon: Globe,
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/lianabaratian/Movie-recommendation-system",
       featured: true
-    }
+    },
   ];
 
   const containerVariants = {
@@ -76,7 +77,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl mb-4">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl mb-4 text-pink-300 font-bold">Featured Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills in web and mobile development. 
             Each project represents a unique challenge and learning experience.
@@ -149,18 +150,6 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex gap-3">
-                      <Button
-                        variant="default"
-                        size="sm"
-                        className="flex items-center gap-2 group/btn"
-                        asChild
-                      >
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 group-hover/btn:rotate-45 transition-transform" />
-                          Live Demo
-                        </a>
-                      </Button>
-                      
                       <Button
                         variant="outline"
                         size="sm"

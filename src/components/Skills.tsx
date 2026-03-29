@@ -6,21 +6,20 @@ const Skills = () => {
     {
       title: "Programming & Web",
       skills: [
-        { name: "Python", level: 70 },
+        { name: "Python", level: 30 },
         { name: "HTML/CSS", level: 75 },
         { name: "JavaScript", level: 65 },
-        { name: "C++", level: 55 },
-        { name: "Java", level: 50 }
+        { name: "C++", level: 40 },
+        { name: "Java", level: 20 }
       ]
     },
     {
       title: "AI & Machine Learning",
       skills: [
-        { name: "Computer Vision", level: 75 },
-        { name: "Reinforcement Learning", level: 70 },
-        { name: "PyTorch", level: 65 },
-        { name: "LLM Prompt Engineering", level: 65 },
-        { name: "Collaborative Filtering", level: 60 }
+        { name: "Computer Vision", level: 55 },
+        { name: "Reinforcement Learning", level: 50 },
+        { name: "LLM Prompt Engineering", level: 45 },
+        { name: "Collaborative Filtering", level: 40 }
       ]
     },
     {
@@ -29,7 +28,9 @@ const Skills = () => {
         { name: "Figma", level: 80 },
         { name: "UI/UX Design", level: 75 },
         { name: "React.js", level: 65 },
-        { name: "FastAPI", level: 65 },
+        { name: "Tailwind CSS", level: 70 },
+        { name: "Next.js", level: 60 },
+        { name: "Vite", level: 65 },
         { name: "Git", level: 75 }
       ]
     }
@@ -84,9 +85,9 @@ const Skills = () => {
             <motion.div
               key={categoryIndex}
               variants={itemVariants}
-              className="bg-card p-6 rounded-lg border border-border"
+              className="p-6 rounded-lg border border-border" style={{ background: 'linear-gradient(135deg, #f472b6 0%, #9ca3af 45%, #000000 100%)' }}
             >
-              <h3 className="text-xl mb-6 text-center">{category.title}</h3>
+              <h3 className="text-xl mb-6 text-center text-black">{category.title}</h3>
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
@@ -134,9 +135,9 @@ const Skills = () => {
           <h3 className="text-xl mb-8">Other Technologies I've Worked With</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Stable Baselines3', 'OpenAI Gym', 'highway-env', 'OpenCV', 'Saliency Mapping',
-              'Swift', 'Base64', 'OOP', 'Semaphores', 'Statistics',
-              'Deep Learning', 'Automata Theory', 'Postman', 'VS Code', 'Vercel'
+              'OpenAI Gym', 'OpenCV', 'Swift', 'OOP', 'Deep Learning',
+              'Postman', 'VS Code', 'Vercel', 'Statistics',
+              'Tailwind CSS', 'Next.js', 'React Hook Form', 'npm / yarn', 'Figma Dev Mode', 'REST APIs', 'git'
             ].map((tech, index) => (
               <motion.span
                 key={tech}

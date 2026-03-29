@@ -138,9 +138,6 @@ const Footer = () => {
               <span>and lots of coffee ☕</span>
             </div>
             
-            <div className="text-sm text-muted-foreground">
-              <span>Built with React, TypeScript & Tailwind CSS</span>
-            </div>
           </div>
         </motion.div>
       </div>

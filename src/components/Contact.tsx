@@ -49,7 +49,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl mb-4">Let's Work Together</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 text-pink-300 font-bold">Let's Work Together</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations.
             Feel free to reach out if you'd like to discuss a project or just say hello!

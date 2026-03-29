@@ -36,7 +36,9 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navHeight = 64;
+      const top = element.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
     setIsOpen(false);
   };
@@ -48,8 +50,8 @@ const Navigation = () => {
       className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Desktop: centered nav */}
         <div className="flex justify-center items-center h-16">
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <motion.button
@@ -58,7 +60,7 @@ const Navigation = () => {
                 className={`relative px-3 py-2 transition-colors ${
                   activeSection === item.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
                 }`}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.label}
@@ -74,8 +76,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Mobile: hamburger on the right */}
+          <div className="md:hidden flex w-full justify-end items-center h-16">
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
               whileTap={{ scale: 0.95 }}
@@ -86,7 +88,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile dropdown menu */}
         <motion.div
           initial={false}
           animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
@@ -97,10 +99,10 @@ const Navigation = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-3 py-2 transition-colors ${
+                className={`block w-full text-right px-3 py-2 transition-colors ${
                   activeSection === item.id ? 'text-primary' : 'text-muted-foreground'
                 }`}
-                whileHover={{ x: 10 }}
+                whileHover={{ x: -10 }}
               >
                 {item.label}
               </motion.button>

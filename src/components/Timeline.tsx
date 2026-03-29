@@ -42,6 +42,16 @@ const Timeline = () => {
       period: '2024',
       description: 'Completed advanced foundational training in predictive modeling and algorithmic classification under Andrew Ng. Covered regression, classification, and core ML principles.',
       achievements: ['Instructed by Andrew Ng', 'Topics: regression, classification, supervised learning', 'Issued by Stanford Online & DeepLearning.AI']
+    },
+    {
+      id: 6,
+      type: 'achievement',
+      icon: Award,
+      title: 'C++ Basics: Selection and Iteration',
+      organization: 'Codio via Coursera',
+      period: '2024',
+      description: 'Completed with a grade of 86%, covering core C++ programming concepts including variables, operators, selection statements, and loop structures.',
+      achievements: ['Grade: 86%', 'Topics: variables, operators, selection & iteration', 'Issued by Codio via Coursera']
     }
   ];
 
