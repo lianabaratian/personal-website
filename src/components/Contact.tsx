@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Contact = () => {
@@ -9,12 +9,6 @@ const Contact = () => {
       label: 'Email',
       value: 'Lianabaratian7@gmail.com',
       href: 'mailto:Lianabaratian7@gmail.com'
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+90 (552) 549 7581',
-      href: 'tel:+905525497581'
     },
     {
       icon: MapPin,

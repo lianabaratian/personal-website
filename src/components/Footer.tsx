@@ -108,12 +108,7 @@ const Footer = () => {
               >
                 Lianabaratian7@gmail.com
               </a>
-              <a
-                href="tel:+905525497581"
-                className="hover:text-primary transition-colors duration-300 block"
-              >
-                +90 (552) 549 7581
-              </a>
+
             </div>
           </motion.div>
         </div>
