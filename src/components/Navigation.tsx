@@ -55,14 +55,7 @@ const Navigation = ({ isDark, toggleTheme }: NavigationProps) => {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo / Name */}
-          <motion.button
-            onClick={() => scrollToSection('home')}
-            className="text-sm font-semibold text-foreground tracking-wide shrink-0"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            LB
-          </motion.button>
+          <div />
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-1">

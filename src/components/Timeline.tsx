@@ -9,9 +9,9 @@ const Timeline = () => {
       icon: GraduationCap,
       title: 'Bachelor of Science in Computer Engineering',
       organization: 'Bahcesehir University',
-      period: '2022 - July 2026 (Expected)',
+      period: '2022 - June 2026',
       description: 'Pursuing a Computer Engineering degree with a focus on AI, deep learning, and software development. Relevant coursework includes Artificial Intelligence, Deep Learning, Web & Mobile App Development, AI-Powered Marketing Communication, Multimedia Systems, Analysis of Algorithms, and more.',
-      achievements: ['Coursework: Artificial Intelligence & Deep Learning', 'Coursework: Web & Mobile App Development', 'Coursework: Formal Language & Automata, Statistics']
+      achievements: ['Coursework: Artificial Intelligence & Deep Learning', 'Coursework: Web & Mobile App Development', 'Coursework: Formal Language & Automata, Statistics', 'Coursework: Data Structures and Algorithms, Operating Systems, Networks']
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const Timeline = () => {
       icon: Briefcase,
       title: 'Frontend Developer Intern',
       organization: 'NetworkX.AI',
-      period: 'February 2025 – Present',
+      period: 'February 2026 – Present (5 months)',
       description: 'Working as a Frontend Developer intern, building and improving user interfaces using modern web technologies. Contributing to real-world AI-driven products in a fast-paced startup environment.',
       achievements: ['Built responsive UI components with React.js and Next.js', 'Styled interfaces using Tailwind CSS and plain CSS/HTML', 'Collaborated on frontend features using JavaScript']
     },

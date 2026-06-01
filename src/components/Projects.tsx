@@ -11,20 +11,43 @@ const Projects = () => {
       id: 1,
       title: "Webinar Landing Page",
       description: "Built a fully responsive multi-page landing site for a client at NetworkX.ai, translating Figma designs into production-ready code. Implemented reusable React components with Next.js routing and Tailwind CSS, ensuring consistent UI across all breakpoints.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+      video: "/agancy.mov",
       technologies: ["React.js", "Next.js", "Tailwind CSS", "Figma"],
       type: "Frontend / UI",
       icon: Globe,
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: null,
+      featured: true
+    },
+    {
+      id: 6,
+      title: "Sentia-Vision",
+      description: "A multimodal UX research tool that analyzes recorded user sessions to detect emotional incongruity — moments where facial expressions contradict spoken words. Generates an emotional timeline dashboard with facial emotion classification, voice sentiment analysis, Truth Score ratings (0–100), and flagged incongruity events. Runs fully local with no cloud APIs or GPU required.",
+      video: "/sentia.MOV",
+      technologies: ["Python", "FastAPI", "MediaPipe", "OpenAI Whisper", "VADER", "React", "Vite", "Tailwind CSS", "Recharts"],
+      type: "AI / Computer Vision",
+      icon: Code,
+      liveUrl: "#",
+      githubUrl: "https://github.com/lianabaratian/Sentia_vision",
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Company Website",
+      description: "Designed and developed a fully responsive multi-page website for a Los Angeles-based residential and commercial construction company. Features a sticky hero with parallax scroll, an interactive project gallery with lightbox, dynamic project detail pages, a testimonials carousel, and a contact section.",
+      video: "/networkx-demo.mov",
+      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Lucide React"],
+      type: "Frontend / UI",
+      icon: Globe,
+      liveUrl: "#",
+      githubUrl: null,
       featured: true
     },
     {
       id: 2,
       title: "Highway Reinforcement Learning Agent",
-
       description: "An autonomous driving agent trained with Deep Reinforcement Learning to safely navigate complex multi-lane highway scenarios. Optimized decision-making via reward shaping to improve collision avoidance and speed regulation, with iterative architecture analysis for smoother lane-changing behavior.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1NzQzOTQ3NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      video: "/highway.mp4.mov",
       technologies: ["Python", "Stable Baselines3", "OpenAI Gym", "highway-env"],
       type: "AI / Simulation",
       icon: Code,
@@ -33,10 +56,22 @@ const Projects = () => {
       featured: true
     },
     {
+      id: 7,
+      title: "Landing Page",
+      description: "A clean, responsive landing page built with form validation using Zod and React Hook Form. Focused on delivering a polished UI with smooth user experience and real-time input validation.",
+      video: "/landing-page.mov",
+      technologies: ["React.js", "Tailwind CSS", "Zod", "React Hook Form", "JavaScript"],
+      type: "Frontend / UI",
+      icon: Globe,
+      liveUrl: "#",
+      githubUrl: null,
+      featured: true
+    },
+    {
       id: 4,
       title: "Movie Recommendation System",
       description: "A full-stack movie recommendation web app with user authentication, movie browsing, search, personalized recommendations, and a review system. Built with React and Tailwind CSS on the frontend, connected to a REST API with JWT-based auth and Axios interceptors.",
-      image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+      video: "/movie-recommendation.mov",
       technologies: ["React", "Tailwind CSS", "JavaScript", "Vite", "Axios", "JWT", "REST API"],
       type: "Full-Stack Web App",
       icon: Globe,
@@ -105,11 +140,22 @@ const Projects = () => {
                       transition={{ duration: 0.3 }}
                       className="aspect-video relative"
                     >
-                      <ImageWithFallback
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
+                      {project.video ? (
+                        <video
+                          src={project.video}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <ImageWithFallback
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
@@ -150,17 +196,19 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex gap-3">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex items-center gap-2 group/btn"
-                        asChild
-                      >
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
-                          Code
-                        </a>
-                      </Button>
+                      {project.githubUrl && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex items-center gap-2 group/btn"
+                          asChild
+                        >
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                            Code
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>
